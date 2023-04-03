@@ -24,6 +24,9 @@ variable ami {
 }
 
 variable tags {
-  type = string
+  type = list(object{
+    Name = string
+    Environment = string
+  })
   nullable = false
 }
