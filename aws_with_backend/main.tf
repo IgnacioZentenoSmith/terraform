@@ -25,3 +25,10 @@ resource "aws_s3_bucket_acl" "example" {
   bucket = aws_s3_bucket.mybucket.id
   acl    = var.acl
 }
+
+resource"aws_s3_bucket_versioning""s3Versioning" {
+    bucket = aws_s3_bucket.mybucket.id
+    versioning_configuration {
+        status = "Enabled"
+    }
+} 
